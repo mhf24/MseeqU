@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+  <metadata>
+    <id>MseeqU</id>
+    <version>0.1.2</version>
+    <title>MseeqU</title>
+    <authors>Mahmoud Bdeir</authors>
+    <owners>Mahmoud Bdeir</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <icon>images\quiz.png</icon>
+    <description>MCQ Quiz Maker with a Telegram Bot</description>
+    <summary>MCQ Quiz Maker with a Telegram Bot</summary>
+    <releaseNotes>Added Telegram Bot</releaseNotes>
+    <copyright>2021© Mahmoud Bdeir</copyright>
+    <repository type="git" url="https://github.com/mbdeir/MseeqU.git" branch="main" commit="57245833e32e5b330506ab00ed4dd9355f153aaa" />
+	<dependencies>
+	  <dependency id="Telegram.Bot" version="17.0.0" />
+	</dependencies>
+  </metadata>
+  <files>
+    <file src="quiz.png" target="images\quiz.png" />
+    <file src="bin\Release\net5.0\AzureStorage.dll" target="lib\net5.0\AzureStorage.dll" />
+    <file src="bin\Release\net5.0\LocalStorage.dll" target="lib\net5.0\LocalStorage.dll" />
+    <file src="bin\Release\net5.0\MseeqU.Core.dll" target="lib\net5.0\MseeqU.Core.dll" />
+    <file src="bin\Release\net5.0\MseeqU.dll" target="lib\net5.0\MseeqU.dll" />
+    <file src="bin\Release\net5.0\Quiz.dll" target="lib\net5.0\Quiz.dll" />
+    <file src="bin\Release\net5.0\QuizFactory.dll" target="lib\net5.0\QuizFactory.dll" />
+    <file src="bin\Release\net5.0\RandomQuestionPicker.dll" target="lib\net5.0\RandomQuestionPicker.dll" />
+    <file src="bin\Release\net5.0\SingleLineParser.dll" target="lib\net5.0\SingleLineParser.dll" />
+  </files>
+</package>

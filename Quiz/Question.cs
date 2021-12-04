@@ -29,7 +29,7 @@ namespace Bdeir.Quizzer
         
 
         #region Constructors and Static Factory Methods
-        static int SeqNum = 0;
+        internal static int SeqNum = 0; // allow Question to reset it each time a Question is created , issue #7
         protected Question(string prompt)
         {
             Prompt = prompt;

@@ -41,6 +41,9 @@ jobs:
       
       - name: Build
         run: dotnet build MseeqU.sln --configuration Release --no-restore
+      
+      - name: Prepare NuGet package
+        run: nuget pack MseeqU.csproj -IncludeReferencedProjects
         
       - name: Publish
         if: startswith(github.ref, 'refs/heads/release')

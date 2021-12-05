@@ -20,17 +20,22 @@ namespace MseeqU_Demo
     {
         public static void Main(string[] args)
         {
-            IQuestionPicker quiz = MseeqU.CreateLocalQuiz("SampleQuiz.txt"
+            IQuestionPicker quiz = MseeqU.CreateLocalQuiz(
+                  "SampleQuiz.txt"
                 , "*" // question prefix
                 , "=" // correct answer prefix
                 , "-" // incorrect answer prefix
                 , AutoRestartOptions.StopAfterLastQuestion
-                , RepeatQuestionOptions.UniqueQuestions);
+                , RepeatQuestionOptions.UniqueQuestions
+            );
 
             while (quiz.HasNext())
             {
                 IQuestion question = quiz.Next();
-                TelegramBot telegram = new TelegramBot(Environment.GetEnvironmentVariable("TelegramBot_Token"), Environment.GetEnvironmentVariable("TelegramBot_ChannelId"));
+                TelegramBot telegram = new TelegramBot(
+                       Environment.GetEnvironmentVariable("TelegramBot_Token")
+                     , Environment.GetEnvironmentVariable("TelegramBot_ChannelId")
+                );
                 if (telegram.SendQuestion(question) != null)
                 {
                     quiz.Remove(question.SequenceNumber);
@@ -51,5 +56,6 @@ namespace MseeqU_Demo
                 , "="
                 , "-"
                 , AutoRestartOptions.StopAfterLastQuestion
-                , RepeatQuestionOptions.UniqueQuestions);
+                , RepeatQuestionOptions.UniqueQuestions
+            );
 ```

@@ -6,7 +6,7 @@ A quiz maker created as a case study for CMPS 252 Software Construction during t
    - Get the `Bot Token` and store it in an environment variable called `TelegramBot_Token`
 2. Create a *public* Telegram Channel, set the unique `t.me/` link
    - Get the `Channel Id` and store it in an environment variabled called `TelegramBot_ChannelId`. The `Channel Id` is the string you added after `t.me/` preceded with @, example: `@mychannel`
-3. Create a quiz file. [Example](samplequiz.txt)
+3. Create a quiz file. [Example](/sampleQuiz.txt)
 
 ```c#
 using Bdeir.Quizzer;

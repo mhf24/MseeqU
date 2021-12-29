@@ -32,6 +32,9 @@ namespace Bdeir.Quizzer
         internal static int SeqNum = 0; // allow Question to reset it each time a Question is created , issue #7
         protected Question(string prompt)
         {
+            if(prompt.Length > 300) {
+                prompt = prompt.Substring(0, 300);    
+            } 
             Prompt = prompt;
             Answers = new List<Answer>();
             SequenceNumber = SeqNum++;

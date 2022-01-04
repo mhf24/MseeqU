@@ -33,7 +33,7 @@ namespace Bdeir.Quizzer
         protected Question(string prompt)
         {
             if(prompt.Length > 300) {
-                prompt = prompt.Substring(0, 300);    
+                throw new IndexOutOfRangeException("Exceeded 300 characters!!");
             } 
             Prompt = prompt;
             Answers = new List<Answer>();

@@ -53,11 +53,9 @@ namespace Bdeir.Quizzer
                     }
                 }
             }
-            if (star && minus && equals){
-              return true;
-            } else {
-              return false;
-            }
+            if (star && minus && equals) return true;
+            
+            return false;
         }
         
         #region Constructors and Static Factory Methods
